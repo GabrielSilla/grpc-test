@@ -1,0 +1,15 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package com.example;
+
+message EtiquetaRequest {
+  string etiqueta = 1;
+}
+
+message EtiquetaResponse {
+  bool success = 1;
+}
+
+service EtiquetaGRPCService {
+  rpc send(EtiquetaRequest) returns (EtiquetaResponse);
+}
